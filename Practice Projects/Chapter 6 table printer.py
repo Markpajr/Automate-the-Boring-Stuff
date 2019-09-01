@@ -11,7 +11,7 @@ def printTable(inputList):
             if len(inputList[innerlist][item]) >= colWidths[innerlist]:
                 colWidths[innerlist] = len(inputList[innerlist][item])
     for innerlist in range(len(inputList[0])):  # Loops based on number of indexes in first innerList (0:5)
-        for item in range(len(inputList)): # Loops based on number of indexes in inputList (0:3)
+        for item in range(len(inputList)):  # Loops based on number of indexes in inputList (0:3)
             print(inputList[item][innerlist].rjust(colWidths[item]), end=" ")
         print('')  # Prints a new line for each innerList
 
