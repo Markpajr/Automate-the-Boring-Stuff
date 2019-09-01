@@ -1,4 +1,4 @@
-# TODO Write function displayInventory() to take invnentory dictionary and display in a multiline output
+# DONE Write function displayInventory() to take invnentory dictionary and display in a multiline output
 
 test = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
 stuff = test

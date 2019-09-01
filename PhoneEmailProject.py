@@ -24,11 +24,11 @@ emailRegex = re.compile(r'''
 @                   # @ Symbol
 [a-zA-Z.+_]+        #Domain name part
 ''', re.VERBOSE)
-# TODO: Get the text off the clipboard
+# DONE: Get the text off the clipboard
 text = pyperclip.paste()
 
 
-# TODO: Extract the emails/phones from this text
+# DONE: Extract the emails/phones from this text
 extractedPhone = phoneNumRegex.findall(text)
 extractedEmail = emailRegex.findall(text)
 
@@ -37,7 +37,7 @@ allPhoneNumbers = []
 for phonenumber in extractedPhone:
     allPhoneNumbers.append(phonenumber[0])
 
-# TODO: Copy the extracted emails/phones to the clipboard
+# DONE: Copy the extracted emails/phones to the clipboard
 results = '\n'.join(allPhoneNumbers) + '\n' + '\n'.join(extractedEmail)
 # resultsDict = dict(zip(allPhoneNumbers, extractedEmail))
 

@@ -1,5 +1,5 @@
-# TODO: Write function Collatz(). One Parameter: Number. If number even, print number/2. If odd, print number *3+1
-# TODO: Make program allow user to type integer. loop collatz on integer until result is 1.
+# DONE: Write function Collatz(). One Parameter: Number. If number even, print number/2. If odd, print number *3+1
+# DONE: Make program allow user to type integer. loop collatz on integer until result is 1.
 
 
 def Collatz(number):
