@@ -1,3 +1,5 @@
+import string
+import random
 import re
 import pyperclip
 # DONE: Write Function to detect password strength
@@ -12,11 +14,12 @@ import pyperclip
 upperRegex = re.compile(r'[A-Z]+')
 lowerRegex = re.compile(r'[a-z]+')
 digitRegex = re.compile(r'\d+')
+punctRegex = re.compile(r'\W+')
 
 
 def passwordstrength(password):
 
-    return bool(len(password) >= 8 and upperRegex.search(password) and lowerRegex.search(password) and digitRegex.search(password))
+    return bool(len(password) >= 16 and upperRegex.search(password) and lowerRegex.search(password) and digitRegex.search(password) and punctRegex.search(password))
 
 
 passTest = passwordstrength(pyperclip.paste())
@@ -25,3 +28,17 @@ if passTest is True:
     print("Strong Password")
 else:
     print("Weak Password")
+
+# Creates a list of 15 randomly generated passwords.
+# 10-36 Characters including punctuation, Upper/Lower letters, and Digits
+randPassList = []
+for i in range(0, 15):
+    randPass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for n in range(random.randint(8, 36))])
+    randPassList.append(randPass)
+
+for password in range(len(randPassList)):
+    randTest = passwordstrength(randPassList[password])
+    if randTest is True:
+        print("Strong Password")
+    else:
+        print("Weak Password")
