@@ -48,7 +48,8 @@ print(md.group())
 # \s Any space, tab, or newline character
 # \S Any character that is NOT a space, tab, or newline character
 
-lyrics = '12 drummers drumming, 11 pipers piping, 10 lords a leaping, 9 ladies dancing, 8 maids a milking, 7 swans a swimming, 6 geese a laying, 5 golden rings, 4calling birds, 3 french hens, 2 turles doves, and 1 partridge in a pear tree'
+lyrics = '''12 drummers drumming, 11 pipers piping, 10 lords a leaping, 9 ladies dancing, 8 maids a milking, 7 swans a swimming, 6 geese a laying, 5 golden rings,
+ 4calling birds, 3 french hens, 2 turles doves, and 1 partridge in a pear tree'''
 
 # Following regex fines 1 or more number, a space, then 1 or more letters
 xmasRegex = re.compile(r'\d+\s\w+')
@@ -71,7 +72,8 @@ beginswithHelloRegex = re.compile(r'^Hello')
 
 beginswithHelloRegex.search('Hello how are you?')
 
-beginswithHelloRegex.search('He said Hello') == None
+if beginswithHelloRegex.search('He said Hello') is None:
+    print("True")
 
 # Similarly, using $ at the end of a regex returns only values that end in the regex
 
