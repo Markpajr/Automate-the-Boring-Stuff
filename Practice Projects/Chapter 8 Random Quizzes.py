@@ -58,7 +58,7 @@ capitals = {
     " Wyoming ": " Cheyenne ",
 }
 
-for quizNum in range(35):
+for quizNum in range(5):
    # TODO: Create quize and answer key
    fileNum = quizNum + 1
    quizFile = open(f"capitalsQuiz{fileNum}.txt", "w")
